@@ -8,7 +8,7 @@ In this project I public my Magento 2 modules to practice and for the portfolio
 * Clone this repository using the ``git clone`` command
 * Install Docker - https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 * Install Docker Compose - https://docs.docker.com/compose/install/#install-compose-on-linux-systems
-* Set up user permissions for Docker - https://docs.docker.com/compose/install/#install-compose-on-linux-systems
+* Set up user permissions for Docker - https://docs.docker.com/engine/install/linux-postinstall/
 * Install Dockergento - https://github.com/ModestCoders/magento2-dockergento/#installation
 * Open the project root directory in the terminal
 * Build and start docker containers using the command - ``dockergento start``
