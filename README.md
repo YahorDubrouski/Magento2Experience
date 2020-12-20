@@ -34,6 +34,6 @@ dockergento magento setup:install \
 * Visit the ``http://magento2experience.loc/`` host to make sure the installation process completed successfully
 
 ## Workflow
-###Database 
+### Database 
 * Run the phpmyadmin using the command - ```docker-compose up -d phpmyadmin```
 * Visit the ``http://magento2experience.loc:6080/`` host to make sure the phpmyadmin installed successfully
