@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\ExceptionHandler">
+        <plugin name="egor_dubrovskiy_override_maintenance_page_plugin"
+                type="EgorDubrovskiy\MaintenancePage\Plugin\ExceptionHandler"/>
+    </type>
+    <preference for="EgorDubrovskiy\MaintenancePage\Api\MaintenancePageResponseInterface"
+                type="EgorDubrovskiy\MaintenancePage\Model\MaintenancePageResponse" />
+    <preference for="EgorDubrovskiy\MaintenancePage\Api\MaintenancePageConfigInterface"
+                type="EgorDubrovskiy\MaintenancePage\Model\MaintenancePageConfig" />
+</config>
