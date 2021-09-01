@@ -10,10 +10,11 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "version": "2.4.1",
+    "version": "2.4.2-p2",
     "require": {
-        "magento/product-community-edition": "2.4.1",
-        "magento/composer-root-update-plugin": "~1.0"
+        "laminas/laminas-escaper": "2.7.0",
+        "magento/product-community-edition": "2.4.2-p2",
+        "magento/composer-root-update-plugin": "~1.1"
     },
     "autoload": {
         "exclude-from-classmap": [
@@ -39,7 +40,7 @@
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.2.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "friendsofphp/php-cs-fixer": "~2.16.0",
         "lusitanian/oauth": "~0.8.10",
         "magento/magento-coding-standard": "*",
@@ -51,6 +52,28 @@
         "phpunit/phpunit": "^9",
         "sebastian/phpcpd": "~5.0.0",
         "squizlabs/php_codesniffer": "~3.5.4"
+    },
+    "replace": {
+        "magento/module-braintree": "*",
+        "magento/module-braintree-graph-ql": "*",
+        "paypal/module-braintree-core": "*",
+        "paypal/module-braintree-graph-ql": "*",
+        "magento/language-es_es": "*",
+        "magento/language-nl_nl": "*",
+        "magento/language-pt_br": "*",
+        "magento/language-zh_hans_cn": "*",
+        "magento/module-authorizenet": "*",
+        "magento/module-authorizenet-acceptjs": "*",
+        "magento/module-authorizenet-cardinal": "*",
+        "magento/module-authorizenet-graph-ql": "*",
+        "magento/module-cardinal-commerce": "*",
+        "magento/module-fedex": "*",
+        "magento/module-ups": "*",
+        "magento/module-usps": "*",
+        "magento/module-signifyd": "*",
+        "yotpo/magento2-module-yotpo-reviews": "*",
+        "yotpo/module-review": "*",
+        "yotpo/module-yotpo": "*"
     },
     "conflict": {
         "gene/bluefoot": "*"
@@ -77,4 +100,3 @@
         "magento-force": "override"
     }
 }
-
