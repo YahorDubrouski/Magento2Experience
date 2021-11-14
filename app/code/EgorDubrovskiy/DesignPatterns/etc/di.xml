@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="EgorDubrovskiy\DesignPatterns\Api\Service\FactoryMethod\FoodFactoryInterface"
+                type="EgorDubrovskiy\DesignPatterns\Model\Service\FactoryMethod\FoodFactoryWithoutDependencyInjection" />
+    <preference for="EgorDubrovskiy\DesignPatterns\Api\Data\Adapter\UserAdapterInterface"
+                type="EgorDubrovskiy\DesignPatterns\Model\Data\Adapter\UserAdapter" />
+    <preference for="EgorDubrovskiy\DesignPatterns\Model\Service\Facade\Calculator\CalculatorInterface"
+                type="EgorDubrovskiy\DesignPatterns\Model\Service\Facade\Calculator\Dneonline\DneonlineCalculatorCache" />
+    <preference for="EgorDubrovskiy\DesignPatterns\Model\Service\Facade\Calculator\Dneonline\Request\RequestInterface"
+                type="EgorDubrovskiy\DesignPatterns\Model\Service\Facade\Calculator\Dneonline\Request\XMLRequest" />
+    <preference for="EgorDubrovskiy\DesignPatterns\Model\Service\Facade\Calculator\Dneonline\Response\HttpResponseFormatterInterface"
+                type="EgorDubrovskiy\DesignPatterns\Model\Service\Facade\Calculator\Dneonline\Response\XMLResponseFormatter" />
+    <preference for="EgorDubrovskiy\DesignPatterns\Model\Data\Builder\PizzaInterface"
+                type="EgorDubrovskiy\DesignPatterns\Model\Data\Builder\Pizza" />
+    <type name="EgorDubrovskiy\DesignPatterns\Model\Data\ChainOfResponsibility\EmergencyServiceManager">
+        <arguments>
+            <argument name="services" xsi:type="array">
+                <item name="0" xsi:type="object">EgorDubrovskiy\DesignPatterns\Model\Data\ChainOfResponsibility\EmergencyService\Firefighters</item>
+                <item name="1" xsi:type="object">EgorDubrovskiy\DesignPatterns\Model\Data\ChainOfResponsibility\EmergencyService\MedicalAssistance</item>
+                <item name="2" xsi:type="object">EgorDubrovskiy\DesignPatterns\Model\Data\ChainOfResponsibility\EmergencyService\Police</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
