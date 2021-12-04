@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="customer_allow_add_description" resource="default">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" />
+        <column xsi:type="varchar" name="customer_email" nullable="false" length="255" />
+        <column xsi:type="boolean" name="allow_add_description" nullable="false" default="true" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/><!--TODO It'll be better to link it via customer ID because email may be changed -->
+        </constraint>
+        <constraint xsi:type="unique" referenceId="CUSTOMER_ALLOW_ADD_DESCRIPTION_CUSTOMER_EMAIL">
+            <column name="customer_email"/>
+        </constraint>
+        <constraint xsi:type="foreign"
+                    referenceId="DESCRIPTION_TABLE_EMAIL_CUSTOMER_TABLE_EMAIL"
+                    column="customer_email" table="customer_allow_add_description"
+                    referenceTable="customer_entity"
+                    referenceColumn="email"
+                    onDelete="CASCADE" />
+    </table>
+</schema>

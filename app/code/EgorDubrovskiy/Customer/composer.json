@@ -1,0 +1,21 @@
+{
+  "name": "egor-dubrovskiy/module-customer",
+  "description": "Module is responsible to extend Magento_Customer module",
+  "require": {
+    "php": "~7.4.0",
+    "magento/module-customer": "^103.0"
+  },
+  "type": "magento2-module",
+  "version": "1.0.0-dev",
+  "license": [
+    "Commercial"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "EgorDubrovskiy\\Customer\\": ""
+    }
+  }
+}
