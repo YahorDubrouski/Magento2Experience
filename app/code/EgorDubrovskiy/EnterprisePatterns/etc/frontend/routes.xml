@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="egor_dubrovskiy_enterprise_patterns" frontName="enterprise_patterns">
+            <module name="EgorDubrovskiy_EnterprisePatterns"/>
+        </route>
+    </router>
+</config>
