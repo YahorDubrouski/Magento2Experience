@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Test data for Revenue Recognition Transaction Script Start -->
+    <type name="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\ContractRepository">
+        <arguments>
+            <argument name="contracts" xsi:type="array">
+                <item name="0" xsi:type="object">TransactionScriptContract1</item>
+                <item name="1" xsi:type="object">TransactionScriptContract2</item>
+                <item name="2" xsi:type="object">TransactionScriptContract3</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="TransactionScriptContract1"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Contract">
+        <arguments>
+            <argument name="id" xsi:type="number">1</argument>
+            <argument name="userId" xsi:type="number">1</argument>
+            <argument name="productId" xsi:type="number">1</argument>
+            <argument name="product" xsi:type="object">TransactionScriptProduct1</argument>
+            <argument name="dateOfPurchase" xsi:type="string">2022-06-01</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TransactionScriptContract2"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Contract">
+        <arguments>
+            <argument name="id" xsi:type="number">2</argument>
+            <argument name="userId" xsi:type="number">1</argument>
+            <argument name="productId" xsi:type="number">2</argument>
+            <argument name="product" xsi:type="object">TransactionScriptProduct2</argument>
+            <argument name="dateOfPurchase" xsi:type="string">2022-04-01</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TransactionScriptContract3"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Contract">
+        <arguments>
+            <argument name="id" xsi:type="number">3</argument>
+            <argument name="userId" xsi:type="number">1</argument>
+            <argument name="productId" xsi:type="number">3</argument>
+            <argument name="product" xsi:type="object">TransactionScriptProduct3</argument>
+            <argument name="dateOfPurchase" xsi:type="string">2022-03-01</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TransactionScriptProduct1"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Product">
+        <arguments>
+            <argument name="id" xsi:type="number">1</argument>
+            <argument name="type"
+                      xsi:type="const">EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Product::PRODUCT_TYPE_WORD_PROCESSOR</argument>
+            <argument name="price" xsi:type="number">10</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TransactionScriptProduct2"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Product">
+        <arguments>
+            <argument name="id" xsi:type="number">2</argument>
+            <argument name="type"
+                      xsi:type="const">EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Product::PRODUCT_TYPE_DATABASE</argument>
+            <argument name="price" xsi:type="number">15</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TransactionScriptProduct3"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Product">
+        <arguments>
+            <argument name="id" xsi:type="number">3</argument>
+            <argument name="type"
+                      xsi:type="const">EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TransactionScript\Product::PRODUCT_TYPE_EXCEL</argument>
+            <argument name="price" xsi:type="number">30</argument>
+        </arguments>
+    </virtualType>
+    <!-- Test data for Revenue Recognition Transaction Script End -->
+    <!-- Test data for Revenue Recognition Table Module Start -->
+    <type name="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\ContractRepository">
+        <arguments>
+            <argument name="contracts" xsi:type="array">
+                <item name="0" xsi:type="object">TableModuleContract1</item>
+                <item name="1" xsi:type="object">TableModuleContract2</item>
+                <item name="2" xsi:type="object">TableModuleContract3</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="TableModuleContract1"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Contract">
+        <arguments>
+            <argument name="id" xsi:type="number">1</argument>
+            <argument name="userId" xsi:type="number">1</argument>
+            <argument name="productId" xsi:type="number">1</argument>
+            <argument name="product" xsi:type="object">TableModuleProduct1</argument>
+            <argument name="dateOfPurchase" xsi:type="string">2022-06-01</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TableModuleContract2"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Contract">
+        <arguments>
+            <argument name="id" xsi:type="number">2</argument>
+            <argument name="userId" xsi:type="number">1</argument>
+            <argument name="productId" xsi:type="number">2</argument>
+            <argument name="product" xsi:type="object">TableModuleProduct2</argument>
+            <argument name="dateOfPurchase" xsi:type="string">2022-04-01</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TableModuleContract3"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Contract">
+        <arguments>
+            <argument name="id" xsi:type="number">3</argument>
+            <argument name="userId" xsi:type="number">1</argument>
+            <argument name="productId" xsi:type="number">3</argument>
+            <argument name="product" xsi:type="object">TableModuleProduct3</argument>
+            <argument name="dateOfPurchase" xsi:type="string">2022-03-01</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TableModuleProduct1"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Product">
+        <arguments>
+            <argument name="id" xsi:type="number">1</argument>
+            <argument name="type"
+                      xsi:type="const">EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Product::PRODUCT_TYPE_WORD_PROCESSOR</argument>
+            <argument name="price" xsi:type="number">20</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TableModuleProduct2"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Product">
+        <arguments>
+            <argument name="id" xsi:type="number">2</argument>
+            <argument name="type"
+                      xsi:type="const">EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Product::PRODUCT_TYPE_DATABASE</argument>
+            <argument name="price" xsi:type="number">90</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TableModuleProduct3"
+                 type="EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Product">
+        <arguments>
+            <argument name="id" xsi:type="number">3</argument>
+            <argument name="type"
+                      xsi:type="const">EgorDubrovskiy\EnterprisePatterns\Model\DomainLayerLogic\RevenueRecognition\TableModule\Product::PRODUCT_TYPE_EXCEL</argument>
+            <argument name="price" xsi:type="number">300</argument>
+        </arguments>
+    </virtualType>
+    <!-- Test data for Revenue Recognition Table Module End -->
+</config>
